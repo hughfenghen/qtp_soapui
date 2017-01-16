@@ -1,0 +1,32 @@
+[{
+	"comment": "登录接口 status=1 登录成功。reqName格式为：TestCaseName-TestStepName；expect为期望值；extParams的属性可以动态设置值并覆盖用例的默认参数",
+	"reqName": "TestSuite-login",
+	"cache": ["token"],
+	"extParams": {
+		"account": "rsaEncrypt{lj745280746}",
+		"password": "rsaEncrypt{123456}"
+	},
+	"expect": {
+		"status": "1"
+	}
+},{
+	"comment": "测试接口A",
+	"reqName": "TestSuite-testA",
+	"extParams": {
+		"token": "cache{login-token}",
+		"a": "test-random{10000}"
+	},
+	"expect": {
+		"data": {
+			"status": "1"
+		}
+	}
+},{
+	"comment": "测试接口B。未插入token，status=0",
+	"reqName": "TestSuite-testB",
+	"expect": {
+		"data": {
+			"status": "0"
+		}
+	}
+}]

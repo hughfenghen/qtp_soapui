@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="dd241a53-9e2e-467f-b984-d68e52ac4f95" activeEnvironment="Default" name="test" resourceRoot="" soapui-version="5.2.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="293576e1-5cfd-4c6d-ac41-4f5e0b6f1799" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:3000" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:3000</con:endpoint></con:endpoints><con:resource name="login" path="/login" id="b342d7b2-4a8c-4366-8e3b-2771be10d8f8"><con:settings/><con:parameters><con:parameter><con:name>account</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>password</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="318d2503-8eb0-4dee-91e4-2e79f7d01e20" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://localhost/login">log:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="6daf6bf0-b9c7-44a7-892d-b4e39a07556c" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:3000</con:endpoint><con:request/><con:originalUri>http://localhost/login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="account" value="soapui_test"/>
+  <con:entry key="password" value="123456"/>
+</con:parameters><con:parameterOrder><con:entry>account</con:entry><con:entry>password</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="testA" path="/testA" id="b5dafdec-18b8-4cf8-893b-326c6d8e9949"><con:settings/><con:parameters><con:parameter><con:name>token</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>A</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="dc391c2f-6a03-4a7c-8995-9df6e9e06a42" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:tes="http://localhost/testA">tes:Response</con:element></con:representation><con:request name="Request 1" id="bb647de3-f2eb-455d-aa33-ca3648d8f8d2" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:3000</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="A" value="A"/>
+  <con:entry key="token" value="111"/>
+</con:parameters><con:parameterOrder><con:entry>token</con:entry><con:entry>A</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="testB" path="/testB" id="07a993fe-cdda-456a-8a80-e69506ec1a52"><con:settings/><con:parameters><con:parameter><con:name>token</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>b</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="9d05f439-74e3-4b31-8f35-3eb2e9128fc2" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:tes="http://localhost/testB">tes:Response</con:element></con:representation><con:request name="Request 1" id="e028f0c7-50ed-47d8-9bf7-286c60fd2147" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:3000</con:endpoint><con:request/><con:originalUri>http://localhost/testB</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="b" value="Bdd"/>
+  <con:entry key="token" value="222"/>
+</con:parameters><con:parameterOrder><con:entry>token</con:entry><con:entry>b</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="b963c38b-c008-4abe-905a-12b356cc9b01" name="http://localhost:3000 TestSuite"><con:description>TestSuite generated for REST Service [http://localhost:3000]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8c594deb-b6f8-4080-90b6-1063ebade629" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestSuite" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="login" id="acdfbc69-f5e0-42cc-af52-bddbb5e2112e"><con:settings/><con:config service="http://localhost:3000" resourcePath="/login" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="login" id="6daf6bf0-b9c7-44a7-892d-b4e39a07556c" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:3000</con:endpoint><con:request/><con:originalUri>http://localhost/login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="account" value="Xrq1VMBf9W4BGGGBK/yMhJyDTAHZm3UA9GCMVwSkwLNtvMGAISCyFJWxUeVBSMTz7Ny+JGXwGBYV YamHt5n6Kg2q2fOLnLyU69NKj9u55qiVuAAHpEW5i/XJlHNYt8bTalPfxU31uHSdBdQAQwSDsfkP 2qYLJioVuMsqP4k8Sok="/>
+  <con:entry key="password" value="FgWMs6CH5lmx4E2Ua8vpajHehYZpqSlVG0GUzc1IP+XmTzc2Q8tloyEcGSb3JxrnURJl2xcqz6Cv DmRRVnbPJMbFDNezMigEwnegp6H27vOjaaxy7BD1Q1RPGcs2/4TAGRlTWFdjVJROlxg3G95sSk5A 6WFYHvWiAbaijBxZFJQ="/>
+</con:parameters><con:parameterOrder><con:entry>account</con:entry><con:entry>password</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="testA" id="3a268b9f-1723-4410-84d7-7b42f5f2a352"><con:settings/><con:config service="http://localhost:3000" resourcePath="/testA" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="testA" id="bb647de3-f2eb-455d-aa33-ca3648d8f8d2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:3000</con:endpoint><con:request/><con:originalUri>http://localhost/testA</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="token" value="874f8ed3-07d1-48de-bbd8-a3089c8a4385"/>
+  <con:entry key="A" value="test-2269"/>
+</con:parameters><con:parameterOrder><con:entry>token</con:entry><con:entry>A</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="testB" id="1b418128-dec0-4b6f-993b-76c1f4b0ec69"><con:settings/><con:config service="http://localhost:3000" resourcePath="/testB" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="testB" id="e028f0c7-50ed-47d8-9bf7-286c60fd2147" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:3000</con:endpoint><con:request/><con:originalUri>http://localhost/testB</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="b" value="Bdd"/>
+  <con:entry key="token" value="222"/>
+</con:parameters><con:parameterOrder><con:entry>token</con:entry><con:entry>b</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="68c52160-6d4d-4aad-8a21-670f895b9692" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="script" searchProperties="true"><con:settings/><con:testStep type="groovy" name="auto_script" id="8a18ca5c-df54-476c-9c42-015e5e9dd16e"><con:settings/><con:config><script>import com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext
+import groovy.json.JsonSlurper
+import customer.RSAUtils
+
+JSON = new JsonSlurper()
+
+CURRENT_TESTCASE = testRunner.testCase
+TEST_SUITE = CURRENT_TESTCASE.parent
+
+//使用JAVA加密 必须导入customer.RSAUtils。customer.jar文件拷贝至目录：&lt;soapui安装目录>\bin\ext 后重启soapui
+PUBLIC_KEY_BASE64 = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCC4d0q2qR7G21TmObv5l0fxpMHcD34pqCjJoIl\nvU/Oa+0rsNkkZljvQAenY8ZNpOPzcfUL/F+qwTpuJh5ny6zl9gPloQRd6PcWob1Z+cuSoEAwBZx4\n+Yw/2QAARjxs5e8GeF0IdY/HK/HmpTCKbmKbUxNaftmeRwfgaG/TGZ93CwIDAQAB"
+
+//缓存 后续需要回传的值
+CACHE = [:]
+
+//============================================= UTILS =======================================================
+//递归 	深度比较返回值与期望是否匹配
+def verifyExcept(actual, expect) {
+	def rs = true
+
+	//类型判断  java Collection 与 Map 不同的遍历方式
+	if (expect instanceof Collection) {
+		expect.eachWithIndex {it, i ->
+			//log.info "i:" + i + "  it:" + it
+			if (it instanceof Map || it instanceof Collection) {
+				return rs = verifyExcept(actual[i], it)
+			} else {
+				def actualValue = actual != null ? actual[i] : null
+				if (actualValue != it) {
+					log.error "expect: $index:${i}=${it}    actual:${actualValue}"
+					return rs = false
+				}
+			}
+		}
+	} else if (expect instanceof Map) {
+		expect.each {k, v ->
+			//log.info "k:" + k + "  v:" + v
+			if (v instanceof Map || v instanceof Collection) {
+				return rs = verifyExcept(actual[k], v)
+			} else {
+				def actualValue = actual != null ? actual[k] : null
+				if (actualValue != v) {
+					log.error "expect: ${k}=${v}    actual:${actualValue}"
+					return rs = false
+				}
+			}
+		}
+	} else {
+		log.error "expect is not Object!"
+		rs = false
+	}
+
+	return rs
+}
+//rsa 加密内容
+def rsaEncrypt(value) {
+	return RSAUtils.encrypt(RSAUtils.getPublicKey(PUBLIC_KEY_BASE64), value)
+}
+//添加扩展参数
+def addExtParams(params, testStep) {
+	if (!params || params.size() == 0) return
+
+	params.each {k, v ->
+		testStep.setPropertyValue(k, interpreter(v))
+	}
+}
+//解析替换字符串中的自定义语法  正则替换有疑问请查java API
+def interpreter(v) {
+	def cachePattern = ~/cache\{\s*(.*?)(\[.+\])*\s*\}/
+	def rsaParamPattern = ~/rsaEncrypt\{\s*(.*?)\s*\}/
+	def randomPattern = ~/random\{\s*(.*?)\s*\}/
+
+	def rs = v
+	def sb = new StringBuffer()
+	def mC = cachePattern.matcher(v)
+	//从缓存中取值 替换 	例："cache{login-token}"
+	while(mC.find()) {
+		if (mC.group(2)) {
+			//使用Eval可以获取多层级的属性值 login-abc['a']['b']
+			def tmp = Eval.me('CACHE', CACHE, "CACHE['${mC.group(1)}']${mC.group(2)}")
+			mC.appendReplacement(sb, tmp)
+		} else {
+			mC.appendReplacement(sb, CACHE[mC.group(1)])
+		}
+	}
+	mC.appendTail(sb)
+	rs = sb.toString()
+
+	//rsa加密 替换 	例："rsaEncrypt{18600000000}"
+	def mR = rsaParamPattern.matcher(rs)
+	sb.delete(0, sb.length())
+	while(mR.find()) {
+		mR.appendReplacement(sb, rsaEncrypt(mR.group(1)))
+	}
+	mR.appendTail(sb)
+	rs = sb.toString()
+
+	//生成随机数 替换	例："soapui自动化-random{1000}"
+	def mRd = randomPattern.matcher(rs)
+	sb.delete(0, sb.length())
+	while(mRd.find()) {
+		mRd.appendReplacement(sb, Math.round(Math.random() * Integer.valueOf(mRd.group(1))) + "")
+	}
+	mRd.appendTail(sb)
+	rs = sb.toString()
+	
+	return rs
+}
+//缓存需要的数据
+def cacheData(items, rsData, prefix) {
+	if (!items || items.size() == 0) return
+	
+	//默认在请求返回数据中取值 也可先缓存固定值共后续请求使用，使数据保持一致
+	items.each {
+		if (it instanceof Map) {
+			it.each {k, v ->
+				CACHE["${prefix}-${k}"] = v
+			}
+		} else {
+			CACHE["${prefix}-${it}"] = rsData[it]
+		}
+	}
+}
+//============================================= RUN =======================================================
+({
+	//加载任务
+	def taskFile = new File(CURRENT_TESTCASE.properties.task_file.value)
+	def tasks = JSON.parseText(taskFile.getText())
+
+	//执行任务
+	tasks.each {
+	    def caseName = it.reqName.split("-")[0]
+	    def stepName = it.reqName.split("-")[1]
+	    
+	    def testStep = TEST_SUITE.getTestCaseByName(caseName).getTestStepByName(stepName)
+		//发送请求前覆盖默认参数
+		addExtParams(it.extParams, testStep)
+		
+	    def testStepContext = new WsdlTestRunContext(testStep)
+	    def result = testStep.run(testRunner, testStepContext)
+
+	    log.info "【${caseName}-${stepName} result data】" + result.responseContent
+	    def rsJson = JSON.parseText(result.responseContent)
+
+	    if (verifyExcept(rsJson, it.expect)) {
+	    	cacheData(it.cache, rsJson, stepName)
+
+    		log.info "【${it.reqName}】success!"
+    		assert true
+	    } else {
+	   	 	log.error "【${it.reqName}】fail!"
+	   	 	assert false
+	    }
+	}
+}())
+
+return
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="test" id="75923eec-7aee-4451-893a-7d5150baf49c"><con:settings/><con:config><script>def cachePattern = ~/cache\{\s*(.*?)(\[.+\])*\s*\}/
+def mC = cachePattern.matcher('login-cache{token}')
+mC.find()
+log.info mC.group(1)
+return</script></con:config></con:testStep><con:properties><con:property><con:name>task_file</con:name><con:value>D:/share/liujun012/workspace/nodejs/auto_service/task_file.json</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
